@@ -50,7 +50,7 @@ def login():
             if user is not None and check_password_hash(user.password, password):
             # get user id, load into session
                 login_user(user)
-                flash("User have successfully signed in", SUCCESS)
+                flash("User have successfully signed in", "success")
 
             # remember to flash a message to the user
             return redirect(url_for("secure_page"))  # they should be redirected to a secure-page route instead
